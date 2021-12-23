@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>服務說明</title>
+    <link href="css/global.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/mothra-header-footer.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      window.onload = function () {};
+      function checkboxInput() {
+        document.getElementById("phone-input-pc").disabled =
+          !document.getElementById("phone-input-pc").disabled;
+        document.getElementById("phone-input-mobile").disabled =
+          !document.getElementById("phone-input-mobile").disabled;
+      }
+      function apply() {
+        console.log(
+          "document.documentElement.clientWidth",
+          document.documentElement.clientWidth
+        );
+        if (document.documentElement.clientWidth < 768) {
+          var phone = document.getElementById("phone-input-mobile").value;
+          if (/^[0-9]{10}$/g.test(phone)) {
+            document.getElementById("warn-text-mobile").style.display = "none";
+            document.getElementById("apply-btn").disabled = false;
+            url = "page3.html";
+            window.location.href = url;
+          } else {
+            document.getElementById("warn-text-mobile").style.display = "block";
+          }
+        } else {
+          var phone = document.getElementById("phone-input-pc").value;
+          if (/^[0-9]{10}$/g.test(phone)) {
+            document.getElementById("warn-text-pc").style.display = "none";
+            document.getElementById("apply-btn").disabled = false;
+            url = "page3.html";
+            window.location.href = url;
+          } else {
+            document.getElementById("warn-text-pc").style.display = "block";
+          }
+        }
+      }
+    </script>
+  </head>
+  <body style="background-image: url('assets/BG.png')">
+    <header>
+      <div class="mothra-header">
+        <nav
+          role="navigation"
+          aria-label="main navigation"
+          class="fui-navbar has-shadow is-spaced"
+        >
+          <div class="fui-container">
+            <div class="fui-navbar-menu">
+              <div class="navbar-left"></div>
+              <div class="navbar-center">
+                <a
+                  id="brand"
+                  href="https://www.fetnet.net/home/"
+                  class="navbar-item brand"
+                  ><img src="./resources/common/images/fetnet-logo.png" alt=""
+                /></a>
+              </div>
+              <div class="navbar-right"></div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <div class="logo-header">
+      <span>遠傳 Ｘ MoveV</span>
+      <span>線上申辦</span>
+    </div>
+    <div class="container cus">
+      <div
+        class="row step"
+        style="
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          margin-top: 50px;
+        "
+      >
+        <div class="step-num-div" id="step-1-div">
+          <div id="step-1-p" class="step-num-p">
+            <span>方案</span><span>選擇</span>
+          </div>
+        </div>
+        <div style="width: fit-content; padding: 0">
+          <img src="assets/black-dot.png" class="red-dot-img" />
+          <img src="assets/black-dot.png" class="red-dot-img" />
+          <img src="assets/black-dot.png" class="red-dot-img" />
+        </div>
+
+        <div class="step-num-div" id="step-2-div">
+          <div id="step-2-p" class="step-num-p">
+            <span>服務</span>
+            <span>說明</span>
+          </div>
+        </div>
+        <div style="width: fit-content; padding: 0">
+          <img src="assets/black-dot.png" class="red-dot-img" />
+          <img src="assets/black-dot.png" class="red-dot-img" />
+          <img src="assets/black-dot.png" class="red-dot-img" />
+        </div>
+        <div class="step-num-div" id="step-3-div">
+          <div id="step-3-p" class="step-num-p">
+            <span>簡訊</span>
+            <span>驗證</span>
+          </div>
+        </div>
+        <div style="width: fit-content; padding: 0">
+          <img src="assets/black-dot.png" class="red-dot-img" />
+          <img src="assets/black-dot.png" class="red-dot-img" />
+          <img src="assets/black-dot.png" class="red-dot-img" />
+        </div>
+        <div class="step-num-div" id="step-4-div">
+          <p id="step-4-p" class="step-num-p">
+            <span>完成</span><span>申辦</span>
+          </p>
+        </div>
+      </div>
+      <div class="col-12 content-div page2">
+        <div class="card plan">
+          <div class="card-header">
+            請申辦者確認同意堅持以下服務條款、使用規範及其他相關規定，方可進行申辦。
+          </div>
+          <div class="card-body">
+            <span class="text-highlight" id="aboutus-slogan-span2"
+              >服務條款</span
+            >
+            <ol>
+              <li>方案到期後，將以每月129元自動扣款並提供服務。</li>
+              <li>本服務申辦完成後，一小時內開通完畢。</li>
+              <li>
+                本服務由您好健康提供，客服專線：02-7751-5168(10:00-18:00)。
+              </li>
+              <li>遠傳電信保留隨時修改或終止本服務內容與收費標準之權利。</li>
+            </ol>
+          </div>
+        </div>
+        <div class="form-check row gy-3">
+          <div
+            class="col-md-9 col-sm-12"
+            style="
+              display: flex;
+              align-items: center;
+              justify-content: flex-start;
+              padding: 0;
+            "
+          >
+            <input
+              type="checkbox"
+              value=""
+              id="flexCheckDefault"
+              onclick="checkboxInput()"
+            />
+            <label class="form-check-label" for="flexCheckDefault"> </label>
+            <span style="margin-left: 50px; color: #141414"
+              >我已詳閱服務說明</span
+            ><input
+              disabled
+              type="phone"
+              id="phone-input-pc"
+              placeholder="請輸入手機號碼"
+              oninput="phoneInputPC()"
+            />
+            <span id="warn-text-pc">請輸入正確手機號碼</span>
+          </div>
+          <div id="phone-div-mobile" class="col-sm-12 input-div-1">
+            <input
+              disabled
+              type="phone"
+              id="phone-input-mobile"
+              placeholder="請輸入手機號碼"
+              oninput="phoneInputMobile()"
+            />
+            <span id="warn-text-mobile">請輸入正確手機號碼</span>
+          </div>
+          <div class="col-md-3 col-sm-12 input-div">
+            <button
+              type="button"
+              class="btn cus-btn"
+              id="apply-btn"
+              onclick="apply()"
+            >
+              同意申辦
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="mothra-footer blank-footer">
+        <div class="fui-container">
+          <div space="1" class="MuiGrid-root copyright MuiGrid-container">
+            <div
+              class="
+                MuiGrid-root
+                MuiGrid-item
+                MuiGrid-grid-xs-12
+                MuiGrid-grid-sm-12
+                MuiGrid-grid-md-12
+              "
+            >
+              <div class="footer-fetnet">
+                <a href="/content/ebu/tw/index/micro-business.html"
+                  ><img
+                    src="./resources/common/images/fetnet-footer-logo.png"
+                    alt="FetnetLogo"
+                    height="30"
+                /></a>
+                <div class="links">
+                  <a href="https://www.fetnet.net/corporate/index.html"
+                    ><small>關於遠傳</small></a
+                  ><a href="https://www.fetnet.net/information/privacy.html"
+                    ><small>隱私權條款</small></a
+                  ><span class="text-sm is-text-gray100"
+                    >遠傳電信版權所有 © Far EasTone<span
+                      class="d-none d-md-inline"
+                    >
+                      Telecommunications Co., Ltd</span
+                    ></span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+<style>
+  #flexCheckDefault {
+    border: none !important;
+  }
+  #phone-div-mobile {
+    display: none;
+  }
+  .input-div {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .step-num-p {
+    color: transparent;
+  }
+  #warn-text-mobile {
+    margin-left: 10px;
+    display: none;
+    color: #cd443a;
+  }
+  #warn-text-pc {
+    margin-left: 10px;
+    display: none;
+    color: #cd443a;
+  }
+  .form-check {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    margin-top: 15px;
+    padding-left: 10px;
+  }
+  #phone-input-pc {
+    margin-left: 20px;
+    width: 40%;
+    border-radius: 0px;
+  }
+  #step-1-div {
+    background-image: url(assets/rt1.png);
+  }
+  #step-2-div {
+    background-image: url(assets/rt2.png);
+  }
+  #step-3-div {
+    background-image: url(assets/gt3.png);
+  }
+  #step-4-div {
+    background-image: url(assets/gt4.png);
+  }
+  #apply-btn {
+    background: #cd443a !important;
+    width: fit-content;
+    color: #ffffff;
+    border-radius: 0%;
+    margin-right: 0;
+    margin-left: auto;
+  }
+  [type="checkbox"] {
+    position: relative;
+    left: 15px;
+    top: -4px;
+    z-index: 0;
+    -webkit-appearance: none;
+  }
+  [type="checkbox"] + label {
+    position: absolute;
+  }
+  [type="checkbox"] + label::before {
+    width: 40px;
+    height: 40px;
+    border-radius: 0px;
+    border: 1px solid #bbbbbb;
+    background-color: #fff;
+    display: block;
+    content: "";
+    float: left;
+    margin-right: 5px;
+    z-index: 5;
+    position: relative;
+  }
+  [type="checkbox"]:checked + label::before {
+    box-shadow: inset 0px 0px 0px 3px #fff;
+    background-image: url(assets/check.png);
+    background-size: 30px auto;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  input {
+    height: 40px;
+    box-shadow: none;
+    border: 1px #707070 solid;
+  }
+  input:disabled {
+    background-color: #bfbfbf;
+  }
+  input:disabled::placeholder {
+    color: #ffffff;
+  }
+  input::placeholder {
+    color: #726d6d;
+  }
+  ol {
+    margin-top: 10px;
+    list-style-position: inside;
+    counter-reset: item;
+    text-indent: -20px;
+  }
+  li {
+    counter-increment: item;
+    margin-bottom: 5px;
+  }
+  .text-highlight {
+    position: relative;
+    z-index: 1;
+    font-size: 25px;
+    line-height: 40px;
+  }
+  .text-highlight::before {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    height: 15px;
+    top: 0.8em;
+    right: -7%;
+    background: #bbbbbb;
+    width: 116%;
+    opacity: 0.8;
+  }
+
+  @media screen and (min-width: 576px) and (max-width: 768px) {
+    .input-div-1 {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+    .input-div {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+    #phone-input-pc {
+      width: 200px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .input-div-1 {
+      justify-content: flex-start;
+      padding: 0 !important;
+    }
+    .input-div {
+      justify-content: flex-start;
+      padding: 0 !important;
+    }
+    #phone-div-mobile {
+      display: block;
+    }
+    #phone-input-pc {
+      display: none;
+    }
+    #apply-btn {
+      margin: 0px !important;
+    }
+    .content-div.page2 {
+      margin: 50px auto 150px auto !important;
+    }
+  }
+  @media screen and (max-width: 576px) {
+    .content-div.page2 {
+      margin: 50px auto 30px auto !important;
+    }
+    #phone-input-mobile {
+      width: 250px;
+    }
+    .form-check {
+      height: unset;
+    }
+    #warn-text {
+      margin-left: 0px;
+      font-size: 10px;
+    }
+    .red-dot-img {
+      display: none;
+    }
+    .cus .step {
+      justify-content: center !important;
+    }
+    #step-1-p span,
+    #step-2-p span {
+      background-color: #cd443a;
+      border-bottom: #cd443a 2px solid;
+      padding: 0 2px;
+      color: #000000;
+    }
+
+    #step-1-p span:first-child,
+    #step-2-p span:first-child,
+    #step-3-p span:first-child,
+    #step-4-p span:first-child {
+      margin-top: 4px;
+    }
+    #step-3-p span,
+    #step-4-p span {
+      background-color: #bfbfbf;
+      border-bottom: #bfbfbf 2px solid;
+      padding: 0 2px;
+      color: #ffffff;
+    }
+    #step-1-p:before {
+      content: url(assets/r01.png);
+      display: block;
+    }
+    #step-2-p:before {
+      content: url(assets/r02.png);
+      display: block;
+    }
+    #step-3-p:before {
+      content: url(assets/g03.png);
+      display: block;
+    }
+    #step-4-p:before {
+      content: url(assets/g04.png);
+      display: block;
+    }
+  }
+</style>

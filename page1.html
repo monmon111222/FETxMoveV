@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>方案選擇</title>
+    <link href="css/global.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/mothra-header-footer.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      window.onload = function () {};
+      function subscribe() {
+        url = "page2.html";
+        window.location.href = url;
+      }
+    </script>
+  </head>
+  <body style="background-image: url('assets/BG.png')">
+    <header>
+      <div class="mothra-header">
+        <nav
+          role="navigation"
+          aria-label="main navigation"
+          class="fui-navbar has-shadow is-spaced"
+        >
+          <div class="fui-container">
+            <div class="fui-navbar-menu">
+              <div class="navbar-left"></div>
+              <div class="navbar-center">
+                <a
+                  id="brand"
+                  href="https://www.fetnet.net/home/"
+                  class="navbar-item brand"
+                  ><img src="./resources/common/images/fetnet-logo.png" alt=""
+                /></a>
+              </div>
+              <div class="navbar-right"></div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <div class="logo-header">
+      <span>遠傳 Ｘ MoveV</span>
+      <span>線上申辦</span>
+    </div>
+    <div class="container cus">
+      <div
+        class="row step"
+        style="
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          margin-top: 50px;
+        "
+      >
+        <div class="step-num-div" id="step-1-div">
+          <div id="step-1-p" class="step-num-p">
+            <span>方案</span><span>選擇</span>
+          </div>
+        </div>
+        <div style="width: fit-content; padding: 0">
+          <img src="assets/black-dot.png" class="red-dot-img" />
+          <img src="assets/black-dot.png" class="red-dot-img" />
+          <img src="assets/black-dot.png" class="red-dot-img" />
+        </div>
+
+        <div class="step-num-div" id="step-2-div">
+          <div id="step-2-p" class="step-num-p">
+            <span>服務</span>
+            <span>說明</span>
+          </div>
+        </div>
+        <div style="width: fit-content; padding: 0">
+          <img src="assets/black-dot.png" class="red-dot-img" />
+          <img src="assets/black-dot.png" class="red-dot-img" />
+          <img src="assets/black-dot.png" class="red-dot-img" />
+        </div>
+        <div class="step-num-div" id="step-3-div">
+          <div id="step-3-p" class="step-num-p">
+            <span>簡訊</span>
+            <span>驗證</span>
+          </div>
+        </div>
+        <div style="width: fit-content; padding: 0">
+          <img src="assets/black-dot.png" class="red-dot-img" />
+          <img src="assets/black-dot.png" class="red-dot-img" />
+          <img src="assets/black-dot.png" class="red-dot-img" />
+        </div>
+        <div class="step-num-div" id="step-4-div">
+          <p id="step-4-p" class="step-num-p">
+            <span>完成</span> <span>申辦</span>
+          </p>
+        </div>
+      </div>
+      <div class="row gy-5 gx-5" id="plan-div">
+        <div class="col-lg-4 col-md-12 col-sm-12 plan-three-div">
+          <div class="card plan">
+            <div class="card-header">
+              <span>MoveV</span> <br /><span class="plan-name-text"
+                >單月方案</span
+              >
+            </div>
+            <div class="card-body">
+              <div class="card-text row justify-content-center">
+                <div class="col-12 plan-price-text">NT.129</div>
+                <button
+                  type="button"
+                  class="btn subscribe-btn"
+                  onclick="subscribe()"
+                >
+                  立即訂閱
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-12 col-sm-12 plan-three-div">
+          <div class="card plan">
+            <div class="card-header">
+              <span>MoveV</span> <br /><span class="plan-name-text"
+                >9個月方案</span
+              >
+            </div>
+            <div class="card-body">
+              <div class="card-text row justify-content-center">
+                <div class="col-12 plan-price-text">NT.999</div>
+                <button
+                  type="button"
+                  class="btn subscribe-btn"
+                  onclick="subscribe()"
+                >
+                  立即訂閱
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-12 col-sm-12 plan-three-div">
+          <div class="card plan">
+            <div class="card-header">
+              <span>MoveV</span> <br /><span class="plan-name-text"
+                >12個月方案</span
+              >
+            </div>
+            <div class="card-body">
+              <div class="card-text row justify-content-center">
+                <div class="col-12 plan-price-text">NT.1299</div>
+                <button
+                  type="button"
+                  class="btn subscribe-btn"
+                  onclick="subscribe()"
+                >
+                  立即訂閱
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="mothra-footer blank-footer">
+        <div class="fui-container">
+          <div space="1" class="MuiGrid-root copyright MuiGrid-container">
+            <div
+              class="
+                MuiGrid-root
+                MuiGrid-item
+                MuiGrid-grid-xs-12
+                MuiGrid-grid-sm-12
+                MuiGrid-grid-md-12
+              "
+            >
+              <div class="footer-fetnet">
+                <a href="/content/ebu/tw/index/micro-business.html"
+                  ><img
+                    src="./resources/common/images/fetnet-footer-logo.png"
+                    alt="FetnetLogo"
+                    height="30"
+                /></a>
+                <div class="links">
+                  <a href="https://www.fetnet.net/corporate/index.html"
+                    ><small>關於遠傳</small></a
+                  ><a href="https://www.fetnet.net/information/privacy.html"
+                    ><small>隱私權條款</small></a
+                  ><span class="text-sm is-text-gray100"
+                    >遠傳電信版權所有 © Far EasTone<span
+                      class="d-none d-md-inline"
+                    >
+                      Telecommunications Co., Ltd</span
+                    ></span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+<style>
+  .step-num-p {
+    color: transparent;
+  }
+  #plan-div {
+    margin: 30px auto 50px auto;
+    justify-content: space-between;
+  }
+  #step-1-div {
+    background-image: url(assets/rt1.png);
+  }
+  #step-2-div {
+    background-image: url(assets/gt2.png);
+  }
+  #step-3-div {
+    background-image: url(assets/gt3.png);
+  }
+  #step-4-div {
+    background-image: url(assets/gt4.png);
+  }
+  .black-dot-img {
+    width: 9px;
+    height: 9px;
+    margin-right: 10px;
+  }
+  .plan-description {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+  }
+  .subscribe-btn {
+    background: #cd443a !important;
+    width: fit-content;
+    color: #ffffff;
+    position: absolute;
+    bottom: -35px;
+    border-radius: 0%;
+  }
+
+  @media screen and (max-width: 768px) {
+    #plan-div {
+      margin: 50px auto 25px auto;
+    }
+    .plan-description {
+      font-size: 13px;
+    }
+  }
+  @media screen and (max-width: 576px) {
+    #plan-div {
+      margin: 0px auto 25px auto;
+    }
+    .red-dot-img {
+      display: none;
+    }
+    .cus .step {
+      justify-content: center !important;
+    }
+    #step-1-p span {
+      background-color: #cd443a;
+      border-bottom: #cd443a 2px solid;
+      padding: 0 2px;
+      color: #000000;
+    }
+
+    #step-1-p span:first-child,
+    #step-2-p span:first-child,
+    #step-3-p span:first-child,
+    #step-4-p span:first-child {
+      margin-top: 4px;
+    }
+    #step-2-p span,
+    #step-3-p span,
+    #step-4-p span {
+      background-color: #bfbfbf;
+      border-bottom: #bfbfbf 2px solid;
+      padding: 0 2px;
+      color: #ffffff;
+    }
+    #step-1-p:before {
+      content: url(assets/r01.png);
+      display: block;
+    }
+    #step-2-p:before {
+      content: url(assets/g02.png);
+      display: block;
+    }
+    #step-3-p:before {
+      content: url(assets/g03.png);
+      display: block;
+    }
+    #step-4-p:before {
+      content: url(assets/g04.png);
+      display: block;
+    }
+  }
+</style>

@@ -1,0 +1,213 @@
+@font-face {
+  font-family: "PingFang";
+  src: url("~@/assets/fonts/PingFang-TC-Regular.woff") format("woff");
+}
+body {
+  font-family: "PingFang" !important;
+}
+.logo-header {
+  background-color: #d0d0d0;
+  padding: 10px 2%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60px;
+  font-size: 25px;
+  font-weight: 500;
+}
+.red-dot-img {
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  margin: auto 3px;
+}
+.step-num-div {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 0%;
+  aspect-ratio: 179/87;
+}
+.step-num-p {
+  display: none;
+  line-height: 24px;
+  font-size: 18px;
+  width: 40px;
+  margin: auto;
+  text-align: center;
+  font-weight: 500;
+}
+.card.plan .plan-price-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 75px;
+}
+.card.plan .plan-name-text {
+  font-size: 45px;
+  letter-spacing: 5px;
+}
+.card.plan {
+  border-radius: 0%;
+  border: 1px solid #707070;
+}
+.card.plan .card-text {
+  position: relative;
+}
+.card.plan .card-header {
+  text-align: center;
+  background-color: #4a4a4a;
+  color: #ffffff;
+  border-radius: 0%;
+  letter-spacing: 2px;
+  padding: 25px 0;
+}
+#step-1-div {
+  width: 12.3vw;
+}
+#step-2-div {
+  width: 12.3vw;
+}
+#step-3-div {
+  width: 12.9vw;
+}
+#step-4-div {
+  width: 13.4vw;
+}
+.cus-btn {
+  font-size: 20px !important;
+  height: 40px !important;
+  padding: 0 40px !important;
+  margin-left: 10px !important;
+}
+.content-div {
+  margin: 80px auto 50px auto;
+}
+
+@media screen and (min-width: 1441px) {
+  #step-1-div,
+  #step-2-div,
+  #step-3-div,
+  #step-4-div {
+    width: 180px;
+  }
+  .container.cus {
+    padding: 0;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1440px) {
+  .container.cus {
+    padding: 0 8%;
+  }
+  .card.plan .plan-name-text {
+    font-size: 35px;
+    letter-spacing: 3px;
+  }
+  .card.plan .plan-price-text {
+    font-size: 60px;
+  }
+  .plan-three-div {
+    width: 29% !important;
+    padding: 0 !important;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .container.cus {
+    padding: 0 0%;
+  }
+  .cus-btn {
+    padding: 0 20px !important;
+  }
+  .card.plan .plan-price-text {
+    font-size: 20px;
+  }
+  .step-num--p {
+    font-size: 14px;
+    line-height: 7vw;
+    margin: 0% -10% 0 auto;
+  }
+  .red-dot-img {
+    width: 6px;
+    height: 6px;
+    margin: auto 3px;
+  }
+  .card.plan .plan-name-text {
+    font-size: 35px;
+    letter-spacing: 1px;
+  }
+  .card.plan .plan-price-text {
+    font-size: 32px;
+  }
+  .plan-three-div {
+    width: 30% !important;
+    padding: 0 !important;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .red-dot-img {
+    width: 6px;
+    height: 6px;
+    margin: auto 1px;
+  }
+  #step-1-div,
+  #step-2-div,
+  #step-3-div,
+  #step-4-div {
+    width: 12.5vw;
+  }
+  .card.plan .plan-name-text {
+    font-size: 30px;
+    letter-spacing: 3px;
+  }
+  .card.plan .plan-price-text {
+    font-size: 30px;
+  }
+  .plan-three-div {
+    width: 100% !important;
+  }
+}
+@media screen and (min-width: 576px) {
+}
+@media screen and (max-width: 576px) {
+  #step-1-div,
+  #step-2-div,
+  #step-3-div,
+  #step-4-div {
+    background-image: none !important;
+  }
+  .step-num-div {
+    width: 80px !important;
+    padding: 0 !important;
+  }
+
+  .red-dot-img {
+    width: 6px;
+    height: 6px;
+    margin: auto 1px;
+  }
+  .card.plan .plan-price-text {
+    font-size: 50px;
+  }
+  .card.plan .plan-name-text {
+    font-size: 30px;
+  }
+  .step-num-p {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 768px) {
+  .cus-btn {
+    font-size: 15px !important;
+    padding: 0 15px !important;
+  }
+  .content-div {
+    margin: 50px auto 25px auto;
+  }
+  .container.cus {
+    padding: 0 2%;
+  }
+}

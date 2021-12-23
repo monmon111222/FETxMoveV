@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>服務說明</title>
+    <link href="css/global.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/mothra-header-footer.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      window.onload = function () {
+        document.getElementById("resend-btn-pc").disabled=true
+        if (document.documentElement.clientWidth < 768) {
+          const spanMobile = document.getElementsByClassName('dash-span-mobile')
+          for(let i = 0;i<4;i++){
+            spanMobile[i].disabled = true
+          }
+        }else {
+          const spanPc = document.getElementsByClassName('dash-span-pc')
+          for(let i = 0;i<4;i++){
+            spanPc[i].disabled = true
+          }
+        }
+        resend()
+        
+      };
+      function spanPcInput(index){
+        console.log('index',index,document.getElementById('dash-span-pc-'+index.toString()).value)
+        if(document.getElementById('dash-span-pc-'+index.toString()).value.length===1){
+          index ++
+        console.log('index',index)
+        if(index!==7){
+          document.getElementById('dash-span-pc-'+index.toString()).focus()
+        }else{
+          document.getElementById('send-btn').disabled = false
+        }
+        }
+        
+      }
+      function spanMobileInput(index){
+        console.log('index',index,document.getElementById('dash-span-mobile-'+index.toString()).value)
+        if(document.getElementById('dash-span-mobile-'+index.toString()).value.length===1){
+          index ++
+        console.log('index',index)
+        if(index!==7){
+          document.getElementById('dash-span-mobile-'+index.toString()).focus()
+        }else{
+          document.getElementById('send-btn').disabled = false
+        }
+        }
+      }
+      function resend(){
+        var timeleft = 120;
+        var downloadTimer = setInterval(function(){
+          if(timeleft <= 0){
+            clearInterval(downloadTimer);
+            document.getElementById("countdown").innerHTML = "0";
+            if (document.documentElement.clientWidth < 768) {
+              document.getElementById("resend-btn-pc").disabled=false
+            } else {
+              document.getElementById("resend-btn-pc").disabled=false
+            }
+            
+          } else {
+            document.getElementById("countdown").innerHTML = timeleft ;
+            
+              document.getElementById("resend-btn-pc").disabled=true
+            
+          }
+          timeleft -= 1;
+        }, 1000);
+          document.getElementById("resend-btn-pc").disabled=true
+        }
+      function apply() {
+        document.getElementById('warn-text').classList.add("show")
+        // url = "page4.html";
+        // window.location.href = url;
+      }
+    </script>
+  </head>
+  <body style="background-image: url('assets/BG.png')">
+    <header>
+      <div class="mothra-header">
+        <nav
+          role="navigation"
+          aria-label="main navigation"
+          class="fui-navbar has-shadow is-spaced"
+        >
+          <div class="fui-container">
+            <div class="fui-navbar-menu">
+              <div class="navbar-left"></div>
+              <div class="navbar-center">
+                <a
+                  id="brand"
+                  href="https://www.fetnet.net/home/"
+                  class="navbar-item brand"
+                  ><img src="./resources/common/images/fetnet-logo.png" alt=""
+                /></a>
+              </div>
+              <div class="navbar-right"></div>
+            </div>
+          </div>
+        </nav>
+      </div>
+      
+    </header>
+    <div class="logo-header">
+      <span>遠傳 Ｘ MoveV</span>
+      <span>線上申辦</span>
+    </div>
+    <div class="container cus">
+      <div
+        class="row step"
+        style="
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          margin-top: 50px;
+        "
+      >
+        <div class="step-num-div" id="step-1-div">
+          <div id="step-1-p" class="step-num-p">
+            <span>方案</span><span>選擇</span>
+          </div>
+        </div>
+        <div style="width: fit-content; padding: 0">
+          <img src="assets/red-dot.png" class="red-dot-img" />
+          <img src="assets/red-dot.png" class="red-dot-img" />
+          <img src="assets/red-dot.png" class="red-dot-img" />
+        </div>
+
+        <div class="step-num-div" id="step-2-div">
+          <div id="step-2-p" class="step-num-p">
+            <span>服務</span> <span>說明</span>
+          </div>
+        </div>
+        <div style="width: fit-content; padding: 0">
+          <img src="assets/red-dot.png" class="red-dot-img" />
+          <img src="assets/red-dot.png" class="red-dot-img" />
+          <img src="assets/red-dot.png" class="red-dot-img" />
+        </div>
+        <div class="step-num-div" id="step-3-div">
+          <div id="step-3-p" class="step-num-p">
+            <span>簡訊</span> <span>驗證</span>
+          </div>
+        </div>
+        <div style="width: fit-content; padding: 0">
+          <img src="assets/black-dot.png" class="red-dot-img" />
+          <img src="assets/black-dot.png" class="red-dot-img" />
+          <img src="assets/black-dot.png" class="red-dot-img" />
+        </div>
+        <div class="step-num-div" id="step-4-div">
+          <div id="step-4-p" class="step-num-p">
+            <span>完成</span><span>申辦</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 content-div">
+        <div class="card plan">
+          <div class="card-header">請輸入簡訊驗證碼 (剩餘<span id="countdown"></span>秒)</div>
+          <div
+            class="card-body"
+            id="md-cardbody"
+            style="
+              display: flex;
+              align-items: center;
+              flex-wrap: wrap;
+              justify-content: space-around;
+            "
+          >
+            <img src="assets/phone-icon.png" id="phone-img" />
+            <input class="dash-span-pc"></input
+            ><input class="dash-span-pc"></input><input class="dash-span-pc"></input
+            ><input class="dash-span-pc"></input>
+
+            <input class="dash-span-pc" id="dash-span-pc-1" oninput="spanPcInput(1)"></input>
+              <input class="dash-span-pc" id="dash-span-pc-2" oninput="spanPcInput(2)"></input>
+              <input class="dash-span-pc" id="dash-span-pc-3" oninput="spanPcInput(3)"></input
+              ><input class="dash-span-pc" id="dash-span-pc-4" oninput="spanPcInput(4)"></input>
+              <input class="dash-span-pc" id="dash-span-pc-5" oninput="spanPcInput(5)"></input
+              ><input class="dash-span-pc" id="dash-span-pc-6" oninput="spanPcInput(6)"></input>
+            <button id="resend-btn-pc"><span
+              style="font-weight: 100; text-shadow: 3px 3px 3px #888888"
+              class="validation-span"
+              onclick="resend()"
+              >重新發送</span
+            ></button>
+          </div>
+        </div>
+        <div id="warn-text">驗證碼輸入錯誤，請重新輸入，如未收到簡訊，請於倒數結束後點選＂重新發送＂</div>
+        <div
+          class="row"
+          style="display: flex; align-items: center; justify-content: center"
+        >
+          <button type="button" class="btn" id="send-btn" disabled onclick="apply()">
+            確認送出
+          </button>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="mothra-footer blank-footer">
+        <div class="fui-container">
+          <div space="1" class="MuiGrid-root copyright MuiGrid-container">
+            <div
+              class="
+                MuiGrid-root
+                MuiGrid-item
+                MuiGrid-grid-xs-12
+                MuiGrid-grid-sm-12
+                MuiGrid-grid-md-12
+              "
+            >
+              <div class="footer-fetnet">
+                <a href="/content/ebu/tw/index/micro-business.html"
+                  ><img
+                    src="./resources/common/images/fetnet-footer-logo.png"
+                    alt="FetnetLogo"
+                    height="30"
+                /></a>
+                <div class="links">
+                  <a href="https://www.fetnet.net/corporate/index.html"
+                    ><small>關於遠傳</small></a
+                  ><a href="https://www.fetnet.net/information/privacy.html"
+                    ><small>隱私權條款</small></a
+                  ><span class="text-sm is-text-gray100"
+                    >遠傳電信版權所有 © Far EasTone<span
+                      class="d-none d-md-inline"
+                    >
+                      Telecommunications Co., Ltd</span
+                    ></span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+<style>
+
+  #warn-text{
+    opacity: 0;
+    text-align: center;
+    color: #cd443a;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  #warn-text.show{
+    opacity: 1;
+    transition: opacity 0.25s ease-in;
+  }
+  #resend-btn-pc{
+    background: transparent;
+    border: none;
+  }
+  .step-num-p {
+    color: transparent;
+  }
+  #phone-img {
+    height: 65px;
+  }
+  #resend-btn-pc:disabled:hover{
+    cursor: not-allowed;
+  }
+  #resend-btn-pc:disabled span{
+    color: #c7c2c2;
+  }
+  #resend-btn-pc span{
+    color: #4a4a4a;
+  }
+  .validation-span {
+    font-size: 40px;
+    height: 40px;
+    color: #c7c2c2;
+    letter-spacing: 5px;
+  }
+  .dash-span-mobile:disabled,.dash-span-pc:disabled{
+    background: transparent !important;
+    border: 1px gray solid !important;
+  }
+  .dash-span-mobile:focus-visible,.dash-span-pc:focus-visible {
+    outline-color: transparent;
+  }
+  .dash-span-mobile,.dash-span-pc {
+    text-align: center;
+    font-size:30px;
+    width: 30px;
+    height: 40px;
+    border: none;
+    border-bottom: 1px gray solid;
+  }
+  #step-1-div {
+    background-image: url(assets/rt1.png);
+  }
+  #step-2-div {
+    background-image: url(assets/rt2.png);
+  }
+  #step-3-div {
+    background-image: url(assets/rt3.png);
+  }
+  #step-4-div {
+    background-image: url(assets/gt4.png);
+  }
+  #send-btn {
+    background: #cd443a !important;
+    width: fit-content;
+    color: #ffffff;
+    border-radius: 0%;
+    font-size: 20px;
+    height: 40px;
+    margin-top: 8vw;
+    padding: 0 40px;
+  }
+  input {
+    height: 40px;
+    box-shadow: none;
+    border: 1px #707070 solid;
+  }
+  input:disabled {
+    background-color: #bfbfbf;
+  }
+  input:disabled::placeholder {
+    color: #ffffff;
+  }
+  input::placeholder {
+    color: #726d6d;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 992px) {
+    .validation-span {
+      font-size: 40px;
+      letter-spacing: 3px;
+      height: 40px;
+    }
+    .dash-span-mobile,.dash-span-pc {
+      font-size:20px;
+      width: 30px;
+    }
+    #phone-img {
+      height: 40px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    #phone-img {
+      height: 30px;
+    }
+    .validation-span {
+      font-size: 30px;
+      letter-spacing: 3px;
+    }
+    .dash-span-mobile,.dash-span-pc {
+      font-size:10px;
+      width: 20px;
+      height: 30px;
+    }
+  }
+  @media screen and (max-width: 576px) {
+    #warn-text{
+    font-size: 10px;
+  }
+    .red-dot-img {
+      display: none;
+    }
+    .cus .step {
+      justify-content: center !important;
+    }
+    #step-1-p span,
+    #step-2-p span,
+    #step-3-p span {
+      background-color: #cd443a;
+      border-bottom: #cd443a 2px solid;
+      padding: 0 2px;
+      color: #000000;
+    }
+
+    #step-1-p span:first-child,
+    #step-2-p span:first-child,
+    #step-3-p span:first-child,
+    #step-4-p span:first-child {
+      margin-top: 4px;
+    }
+    #step-4-p span {
+      background-color: #bfbfbf;
+      border-bottom: #bfbfbf 2px solid;
+      padding: 0 2px;
+      color: #ffffff;
+    }
+    #step-1-p:before {
+      content: url(assets/r01.png);
+      display: block;
+    }
+    #step-2-p:before {
+      content: url(assets/r02.png);
+      display: block;
+    }
+    #step-3-p:before {
+      content: url(assets/r03.png);
+      display: block;
+    }
+    #step-4-p:before {
+      content: url(assets/g04.png);
+      display: block;
+    }
+  }
+</style>
